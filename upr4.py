@@ -1,3 +1,4 @@
+import numpy as np
 def gaussian_blur(img_array, sigma, w_size):
     gauss_array = np.zeros((w_size, w_size))
     for x in range(-w_size // 2, w_size // 2 + 1):
