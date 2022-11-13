@@ -24,15 +24,6 @@ def new_ball():
     color = COLORS[randint(0, 5)]
     circle(screen, color, (x, y), r)
 
-def new_ball1():
-    #'''рисует новый шарик '''
-    global x1,y1,r1
-    x1= randint(100, 1100)
-    y1 = randint(100, 900)
-    r1 = randint(10, 100)
-    color = COLORS[randint(0, 5)]
-    circle(screen, color, (x1, y1), r1)
-
 pygame.display.update()
 clock = pygame.time.Clock()
 finished = False
@@ -46,7 +37,6 @@ while not finished:
             if (((event.pos[0]-x)**2+(event.pos[1]-y)**2)<= r**2):
                 count_popadaniy+=1          
     new_ball()
-    new_ball1()
     pygame.display.update()
     screen.fill(BLACK)
 print(count_popadaniy)
